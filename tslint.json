@@ -1,0 +1,10 @@
+{
+  "defaultSeverity": "error",
+  "extends": "gts/tslint.json",
+  "rules": {
+    "member-access": true,
+    "no-inferrable-types": [true, "ignore-params"],
+    "object-literal-shorthand": false,
+    "variable-name": [true, "ban-keywords"]
+  }
+}

@@ -1,0 +1,235 @@
+// Definitions
+
+// Based on https://www.sassmeister.com/gist/8346425
+@function enumerate($list) {
+  $out: ();
+  @for $index from 1 through length($list) {
+    $value: nth($list, $index);
+    // We need to use +0 or else all values use the last $index, since sass uses
+    // late binding for some reason.
+    $out: append($out, ($index+0 $value));
+  }
+  @return $out;
+}
+
+$alphabet: A B C D E F G H I J K L M N O P Q R S T U V W X Y Z;
+$alphabet_map: enumerate($alphabet);
+
+$col_spacing: 20 * 1.11;
+$plugboard_height: 110;  // only including wires
+$plugboard_handle_dist: 40;
+
+$saturation: 100%;
+$lightness: 37.5%;
+$animation_duration: 500ms;
+
+// HTML
+
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+div#input {
+  position: absolute;
+  top: 20px;
+  left: 50px;
+  input {
+    text-transform: uppercase;
+  }
+}
+
+div#drawing {
+  width: 100%;
+  height: 100%;
+}
+
+label > span {
+  display: inline-block;
+  width: 100px;
+}
+
+input.bad {
+  background: #faa;
+}
+
+// Global SVG
+
+svg text {
+  alignment-baseline: central;
+  font-family: Arial,Helvetica,sans;
+  text-anchor: middle;
+  fill: black;
+  user-select: none;
+}
+
+// Keyboard & Display
+
+.keyboard-like {
+  circle {
+    stroke-width: 2px;
+  }
+  text {
+    alignment-baseline: central;
+    font-family: Arial,Helvetica,sans;
+    font-size: 15pt;
+  }
+}
+#g-display {
+  circle {
+    fill: #eee;
+    stroke: #999;
+  }
+  text {
+    fill: #999;
+  }
+  @each $letter in $alphabet {
+    &.selected-letter-#{$letter} .letter-#{$letter} {
+      circle {
+        fill: yellow;
+        /* TODO: stroke = wire-color */
+      }
+      text {
+        fill: black;
+      }
+    }
+  }
+}
+#g-keyboard {
+  circle {
+    fill: #333;
+    stroke: #ccc;
+  }
+  text {
+    fill: white;
+  }
+  .keyboard-key {
+    cursor: pointer;
+  }
+  @each $letter in $alphabet {
+    &.selected-letter-#{$letter} .letter-#{$letter} {
+      circle {
+        fill: #bbb;
+        stroke: #333;
+        /* TODO: stroke = wire-color */
+      }
+      text {
+        fill: black;
+      }
+    }
+  }
+}
+
+// Plugboard
+
+#g-plugboard {
+  .box {
+    fill: none;
+    stroke: black;
+    stroke-width: 1px;
+  }
+  text {
+    font-size: 11pt;
+  }
+  .wire {
+    .animated & {
+      transition: d $animation_duration ease;
+    }
+    $handle: $plugboard_handle_dist;
+    $height: $plugboard_height;
+    @for $offset from -25 through 25 {
+      $x2: $offset * $col_spacing;
+      &.offset-#{$offset} {
+        d: path('M0,0 C0,#{$handle} #{$x2},#{$height - $handle} #{$x2},#{$height}');
+      }
+      &.offset-#{$offset} ~ .plugboard-hotspot {
+        transform: translate($x2 * 1px, 0);
+      }
+    }
+  }
+  .plugboard-hotspot {
+    cursor: pointer;
+    stroke-width: 0;
+    .animated & {
+      transition: transform $animation_duration ease;
+    }
+  }
+}
+
+// Rotor
+
+.ring-line {
+  fill: none;
+  stroke: black;
+  stroke-width: 2px;
+}
+.ring-letter {
+  font-size: 11pt;
+  .animated & {
+    transition: fill $animation_duration ease;
+  }
+  &.notch {
+    fill: red;
+  }
+}
+#g-reflector .ring-letter {
+  font-size: 8pt;
+}
+.ring-dot {
+  fill: hsl(0, $saturation, $lightness);
+  stroke: none;
+}
+.ring-window {
+  fill: none;
+  stroke: black;
+  stroke-width: 5px;
+}
+// Each rotor has multiple wires, but we only want to show the selected one at
+// any given time.
+.rotor-wires-instance {
+  visibility: hidden;  // For speed, so it is not drawn at all.
+  opacity: 0;          // For fade in/out effect.
+  .animated & {
+    transition: all $animation_duration ease;
+  }
+  &.selected {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+.rotor, .rotor-wires {
+  .animated & {
+    transition: transform $animation_duration ease;
+  }
+}
+
+// Rotor drag hotspots
+
+.rotor-hotspot {
+  cursor: pointer;
+  opacity: 0;
+}
+
+// Wires
+
+.wire {
+  fill: none;
+  stroke-width: 1px;
+}
+@each $letter in $alphabet {
+  .selected-letter-#{$letter} .wire-#{$letter} {
+    stroke-width: 5px;
+  }
+}
+
+// Colors
+
+// Color wheel.
+@each $i, $letter in $alphabet_map {
+  .color-#{$letter} {
+    stroke: hsl(($i - 1) * 360 / 26, $saturation, $lightness);
+  }
+  .fill-color-#{$letter} {
+    fill: hsl(($i - 1) * 360 / 26, $saturation, $lightness);
+  }
+}

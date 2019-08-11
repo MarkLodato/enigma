@@ -1,0 +1,14 @@
+{
+  "extends": "./node_modules/gts/tsconfig-google.json",
+  "compilerOptions": {
+    "lib": ["es2015", "dom"],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "outDir": "./built",
+    "target": "es2015",
+    "noEmitOnError": true
+  },
+  "include": [
+    "./lib/**/*"
+  ]
+}
