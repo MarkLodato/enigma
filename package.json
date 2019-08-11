@@ -34,6 +34,7 @@
     "webpack-dev-server": "^3.7.2"
   },
   "scripts": {
+    "build": "webpack",
     "test": "mochapack --webpack-config=webpack.test.config.js test/**/*.ts",
     "check": "gts check",
     "clean": "gts clean",
