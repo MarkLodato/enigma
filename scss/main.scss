@@ -34,6 +34,7 @@ div#input {
   position: absolute;
   top: 20px;
   left: 50px;
+  width: 600px;
   input {
     text-transform: uppercase;
   }
@@ -51,6 +52,10 @@ label > span {
 
 input.bad {
   background: #faa;
+}
+
+#more-info {
+  float: right;
 }
 
 // Global SVG

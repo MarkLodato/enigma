@@ -5,7 +5,8 @@ html, body {
 div#input {
   position: absolute;
   top: 20px;
-  left: 50px; }
+  left: 50px;
+  width: 600px; }
   div#input input {
     text-transform: uppercase; }
 
@@ -19,6 +20,9 @@ label > span {
 
 input.bad {
   background: #faa; }
+
+#more-info {
+  float: right; }
 
 svg text {
   alignment-baseline: central;
