@@ -1,0 +1,1047 @@
+html, body {
+  margin: 0;
+  height: 100%; }
+
+div#input {
+  position: absolute;
+  top: 20px;
+  left: 50px; }
+  div#input input {
+    text-transform: uppercase; }
+
+div#drawing {
+  width: 100%;
+  height: 100%; }
+
+label > span {
+  display: inline-block;
+  width: 100px; }
+
+input.bad {
+  background: #faa; }
+
+svg text {
+  alignment-baseline: central;
+  font-family: Arial,Helvetica,sans;
+  text-anchor: middle;
+  fill: black;
+  user-select: none; }
+
+.keyboard-like circle {
+  stroke-width: 2px; }
+
+.keyboard-like text {
+  alignment-baseline: central;
+  font-family: Arial,Helvetica,sans;
+  font-size: 15pt; }
+
+#g-display circle {
+  fill: #eee;
+  stroke: #999; }
+
+#g-display text {
+  fill: #999; }
+
+#g-display.selected-letter-A .letter-A circle {
+  fill: yellow;
+  /* TODO: stroke = wire-color */ }
+
+#g-display.selected-letter-A .letter-A text {
+  fill: black; }
+
+#g-display.selected-letter-B .letter-B circle {
+  fill: yellow;
+  /* TODO: stroke = wire-color */ }
+
+#g-display.selected-letter-B .letter-B text {
+  fill: black; }
+
+#g-display.selected-letter-C .letter-C circle {
+  fill: yellow;
+  /* TODO: stroke = wire-color */ }
+
+#g-display.selected-letter-C .letter-C text {
+  fill: black; }
+
+#g-display.selected-letter-D .letter-D circle {
+  fill: yellow;
+  /* TODO: stroke = wire-color */ }
+
+#g-display.selected-letter-D .letter-D text {
+  fill: black; }
+
+#g-display.selected-letter-E .letter-E circle {
+  fill: yellow;
+  /* TODO: stroke = wire-color */ }
+
+#g-display.selected-letter-E .letter-E text {
+  fill: black; }
+
+#g-display.selected-letter-F .letter-F circle {
+  fill: yellow;
+  /* TODO: stroke = wire-color */ }
+
+#g-display.selected-letter-F .letter-F text {
+  fill: black; }
+
+#g-display.selected-letter-G .letter-G circle {
+  fill: yellow;
+  /* TODO: stroke = wire-color */ }
+
+#g-display.selected-letter-G .letter-G text {
+  fill: black; }
+
+#g-display.selected-letter-H .letter-H circle {
+  fill: yellow;
+  /* TODO: stroke = wire-color */ }
+
+#g-display.selected-letter-H .letter-H text {
+  fill: black; }
+
+#g-display.selected-letter-I .letter-I circle {
+  fill: yellow;
+  /* TODO: stroke = wire-color */ }
+
+#g-display.selected-letter-I .letter-I text {
+  fill: black; }
+
+#g-display.selected-letter-J .letter-J circle {
+  fill: yellow;
+  /* TODO: stroke = wire-color */ }
+
+#g-display.selected-letter-J .letter-J text {
+  fill: black; }
+
+#g-display.selected-letter-K .letter-K circle {
+  fill: yellow;
+  /* TODO: stroke = wire-color */ }
+
+#g-display.selected-letter-K .letter-K text {
+  fill: black; }
+
+#g-display.selected-letter-L .letter-L circle {
+  fill: yellow;
+  /* TODO: stroke = wire-color */ }
+
+#g-display.selected-letter-L .letter-L text {
+  fill: black; }
+
+#g-display.selected-letter-M .letter-M circle {
+  fill: yellow;
+  /* TODO: stroke = wire-color */ }
+
+#g-display.selected-letter-M .letter-M text {
+  fill: black; }
+
+#g-display.selected-letter-N .letter-N circle {
+  fill: yellow;
+  /* TODO: stroke = wire-color */ }
+
+#g-display.selected-letter-N .letter-N text {
+  fill: black; }
+
+#g-display.selected-letter-O .letter-O circle {
+  fill: yellow;
+  /* TODO: stroke = wire-color */ }
+
+#g-display.selected-letter-O .letter-O text {
+  fill: black; }
+
+#g-display.selected-letter-P .letter-P circle {
+  fill: yellow;
+  /* TODO: stroke = wire-color */ }
+
+#g-display.selected-letter-P .letter-P text {
+  fill: black; }
+
+#g-display.selected-letter-Q .letter-Q circle {
+  fill: yellow;
+  /* TODO: stroke = wire-color */ }
+
+#g-display.selected-letter-Q .letter-Q text {
+  fill: black; }
+
+#g-display.selected-letter-R .letter-R circle {
+  fill: yellow;
+  /* TODO: stroke = wire-color */ }
+
+#g-display.selected-letter-R .letter-R text {
+  fill: black; }
+
+#g-display.selected-letter-S .letter-S circle {
+  fill: yellow;
+  /* TODO: stroke = wire-color */ }
+
+#g-display.selected-letter-S .letter-S text {
+  fill: black; }
+
+#g-display.selected-letter-T .letter-T circle {
+  fill: yellow;
+  /* TODO: stroke = wire-color */ }
+
+#g-display.selected-letter-T .letter-T text {
+  fill: black; }
+
+#g-display.selected-letter-U .letter-U circle {
+  fill: yellow;
+  /* TODO: stroke = wire-color */ }
+
+#g-display.selected-letter-U .letter-U text {
+  fill: black; }
+
+#g-display.selected-letter-V .letter-V circle {
+  fill: yellow;
+  /* TODO: stroke = wire-color */ }
+
+#g-display.selected-letter-V .letter-V text {
+  fill: black; }
+
+#g-display.selected-letter-W .letter-W circle {
+  fill: yellow;
+  /* TODO: stroke = wire-color */ }
+
+#g-display.selected-letter-W .letter-W text {
+  fill: black; }
+
+#g-display.selected-letter-X .letter-X circle {
+  fill: yellow;
+  /* TODO: stroke = wire-color */ }
+
+#g-display.selected-letter-X .letter-X text {
+  fill: black; }
+
+#g-display.selected-letter-Y .letter-Y circle {
+  fill: yellow;
+  /* TODO: stroke = wire-color */ }
+
+#g-display.selected-letter-Y .letter-Y text {
+  fill: black; }
+
+#g-display.selected-letter-Z .letter-Z circle {
+  fill: yellow;
+  /* TODO: stroke = wire-color */ }
+
+#g-display.selected-letter-Z .letter-Z text {
+  fill: black; }
+
+#g-keyboard circle {
+  fill: #333;
+  stroke: #ccc; }
+
+#g-keyboard text {
+  fill: white; }
+
+#g-keyboard .keyboard-key {
+  cursor: pointer; }
+
+#g-keyboard.selected-letter-A .letter-A circle {
+  fill: #bbb;
+  stroke: #333;
+  /* TODO: stroke = wire-color */ }
+
+#g-keyboard.selected-letter-A .letter-A text {
+  fill: black; }
+
+#g-keyboard.selected-letter-B .letter-B circle {
+  fill: #bbb;
+  stroke: #333;
+  /* TODO: stroke = wire-color */ }
+
+#g-keyboard.selected-letter-B .letter-B text {
+  fill: black; }
+
+#g-keyboard.selected-letter-C .letter-C circle {
+  fill: #bbb;
+  stroke: #333;
+  /* TODO: stroke = wire-color */ }
+
+#g-keyboard.selected-letter-C .letter-C text {
+  fill: black; }
+
+#g-keyboard.selected-letter-D .letter-D circle {
+  fill: #bbb;
+  stroke: #333;
+  /* TODO: stroke = wire-color */ }
+
+#g-keyboard.selected-letter-D .letter-D text {
+  fill: black; }
+
+#g-keyboard.selected-letter-E .letter-E circle {
+  fill: #bbb;
+  stroke: #333;
+  /* TODO: stroke = wire-color */ }
+
+#g-keyboard.selected-letter-E .letter-E text {
+  fill: black; }
+
+#g-keyboard.selected-letter-F .letter-F circle {
+  fill: #bbb;
+  stroke: #333;
+  /* TODO: stroke = wire-color */ }
+
+#g-keyboard.selected-letter-F .letter-F text {
+  fill: black; }
+
+#g-keyboard.selected-letter-G .letter-G circle {
+  fill: #bbb;
+  stroke: #333;
+  /* TODO: stroke = wire-color */ }
+
+#g-keyboard.selected-letter-G .letter-G text {
+  fill: black; }
+
+#g-keyboard.selected-letter-H .letter-H circle {
+  fill: #bbb;
+  stroke: #333;
+  /* TODO: stroke = wire-color */ }
+
+#g-keyboard.selected-letter-H .letter-H text {
+  fill: black; }
+
+#g-keyboard.selected-letter-I .letter-I circle {
+  fill: #bbb;
+  stroke: #333;
+  /* TODO: stroke = wire-color */ }
+
+#g-keyboard.selected-letter-I .letter-I text {
+  fill: black; }
+
+#g-keyboard.selected-letter-J .letter-J circle {
+  fill: #bbb;
+  stroke: #333;
+  /* TODO: stroke = wire-color */ }
+
+#g-keyboard.selected-letter-J .letter-J text {
+  fill: black; }
+
+#g-keyboard.selected-letter-K .letter-K circle {
+  fill: #bbb;
+  stroke: #333;
+  /* TODO: stroke = wire-color */ }
+
+#g-keyboard.selected-letter-K .letter-K text {
+  fill: black; }
+
+#g-keyboard.selected-letter-L .letter-L circle {
+  fill: #bbb;
+  stroke: #333;
+  /* TODO: stroke = wire-color */ }
+
+#g-keyboard.selected-letter-L .letter-L text {
+  fill: black; }
+
+#g-keyboard.selected-letter-M .letter-M circle {
+  fill: #bbb;
+  stroke: #333;
+  /* TODO: stroke = wire-color */ }
+
+#g-keyboard.selected-letter-M .letter-M text {
+  fill: black; }
+
+#g-keyboard.selected-letter-N .letter-N circle {
+  fill: #bbb;
+  stroke: #333;
+  /* TODO: stroke = wire-color */ }
+
+#g-keyboard.selected-letter-N .letter-N text {
+  fill: black; }
+
+#g-keyboard.selected-letter-O .letter-O circle {
+  fill: #bbb;
+  stroke: #333;
+  /* TODO: stroke = wire-color */ }
+
+#g-keyboard.selected-letter-O .letter-O text {
+  fill: black; }
+
+#g-keyboard.selected-letter-P .letter-P circle {
+  fill: #bbb;
+  stroke: #333;
+  /* TODO: stroke = wire-color */ }
+
+#g-keyboard.selected-letter-P .letter-P text {
+  fill: black; }
+
+#g-keyboard.selected-letter-Q .letter-Q circle {
+  fill: #bbb;
+  stroke: #333;
+  /* TODO: stroke = wire-color */ }
+
+#g-keyboard.selected-letter-Q .letter-Q text {
+  fill: black; }
+
+#g-keyboard.selected-letter-R .letter-R circle {
+  fill: #bbb;
+  stroke: #333;
+  /* TODO: stroke = wire-color */ }
+
+#g-keyboard.selected-letter-R .letter-R text {
+  fill: black; }
+
+#g-keyboard.selected-letter-S .letter-S circle {
+  fill: #bbb;
+  stroke: #333;
+  /* TODO: stroke = wire-color */ }
+
+#g-keyboard.selected-letter-S .letter-S text {
+  fill: black; }
+
+#g-keyboard.selected-letter-T .letter-T circle {
+  fill: #bbb;
+  stroke: #333;
+  /* TODO: stroke = wire-color */ }
+
+#g-keyboard.selected-letter-T .letter-T text {
+  fill: black; }
+
+#g-keyboard.selected-letter-U .letter-U circle {
+  fill: #bbb;
+  stroke: #333;
+  /* TODO: stroke = wire-color */ }
+
+#g-keyboard.selected-letter-U .letter-U text {
+  fill: black; }
+
+#g-keyboard.selected-letter-V .letter-V circle {
+  fill: #bbb;
+  stroke: #333;
+  /* TODO: stroke = wire-color */ }
+
+#g-keyboard.selected-letter-V .letter-V text {
+  fill: black; }
+
+#g-keyboard.selected-letter-W .letter-W circle {
+  fill: #bbb;
+  stroke: #333;
+  /* TODO: stroke = wire-color */ }
+
+#g-keyboard.selected-letter-W .letter-W text {
+  fill: black; }
+
+#g-keyboard.selected-letter-X .letter-X circle {
+  fill: #bbb;
+  stroke: #333;
+  /* TODO: stroke = wire-color */ }
+
+#g-keyboard.selected-letter-X .letter-X text {
+  fill: black; }
+
+#g-keyboard.selected-letter-Y .letter-Y circle {
+  fill: #bbb;
+  stroke: #333;
+  /* TODO: stroke = wire-color */ }
+
+#g-keyboard.selected-letter-Y .letter-Y text {
+  fill: black; }
+
+#g-keyboard.selected-letter-Z .letter-Z circle {
+  fill: #bbb;
+  stroke: #333;
+  /* TODO: stroke = wire-color */ }
+
+#g-keyboard.selected-letter-Z .letter-Z text {
+  fill: black; }
+
+#g-plugboard .box {
+  fill: none;
+  stroke: black;
+  stroke-width: 1px; }
+
+#g-plugboard text {
+  font-size: 11pt; }
+
+.animated #g-plugboard .wire {
+  transition: d 500ms ease; }
+
+#g-plugboard .wire.offset--25 {
+  d: path("M0,0 C0,40 -555,70 -555,110"); }
+
+#g-plugboard .wire.offset--25 ~ .plugboard-hotspot {
+  transform: translate(-555px, 0); }
+
+#g-plugboard .wire.offset--24 {
+  d: path("M0,0 C0,40 -532.8,70 -532.8,110"); }
+
+#g-plugboard .wire.offset--24 ~ .plugboard-hotspot {
+  transform: translate(-532.8px, 0); }
+
+#g-plugboard .wire.offset--23 {
+  d: path("M0,0 C0,40 -510.6,70 -510.6,110"); }
+
+#g-plugboard .wire.offset--23 ~ .plugboard-hotspot {
+  transform: translate(-510.6px, 0); }
+
+#g-plugboard .wire.offset--22 {
+  d: path("M0,0 C0,40 -488.4,70 -488.4,110"); }
+
+#g-plugboard .wire.offset--22 ~ .plugboard-hotspot {
+  transform: translate(-488.4px, 0); }
+
+#g-plugboard .wire.offset--21 {
+  d: path("M0,0 C0,40 -466.2,70 -466.2,110"); }
+
+#g-plugboard .wire.offset--21 ~ .plugboard-hotspot {
+  transform: translate(-466.2px, 0); }
+
+#g-plugboard .wire.offset--20 {
+  d: path("M0,0 C0,40 -444,70 -444,110"); }
+
+#g-plugboard .wire.offset--20 ~ .plugboard-hotspot {
+  transform: translate(-444px, 0); }
+
+#g-plugboard .wire.offset--19 {
+  d: path("M0,0 C0,40 -421.8,70 -421.8,110"); }
+
+#g-plugboard .wire.offset--19 ~ .plugboard-hotspot {
+  transform: translate(-421.8px, 0); }
+
+#g-plugboard .wire.offset--18 {
+  d: path("M0,0 C0,40 -399.6,70 -399.6,110"); }
+
+#g-plugboard .wire.offset--18 ~ .plugboard-hotspot {
+  transform: translate(-399.6px, 0); }
+
+#g-plugboard .wire.offset--17 {
+  d: path("M0,0 C0,40 -377.4,70 -377.4,110"); }
+
+#g-plugboard .wire.offset--17 ~ .plugboard-hotspot {
+  transform: translate(-377.4px, 0); }
+
+#g-plugboard .wire.offset--16 {
+  d: path("M0,0 C0,40 -355.2,70 -355.2,110"); }
+
+#g-plugboard .wire.offset--16 ~ .plugboard-hotspot {
+  transform: translate(-355.2px, 0); }
+
+#g-plugboard .wire.offset--15 {
+  d: path("M0,0 C0,40 -333,70 -333,110"); }
+
+#g-plugboard .wire.offset--15 ~ .plugboard-hotspot {
+  transform: translate(-333px, 0); }
+
+#g-plugboard .wire.offset--14 {
+  d: path("M0,0 C0,40 -310.8,70 -310.8,110"); }
+
+#g-plugboard .wire.offset--14 ~ .plugboard-hotspot {
+  transform: translate(-310.8px, 0); }
+
+#g-plugboard .wire.offset--13 {
+  d: path("M0,0 C0,40 -288.6,70 -288.6,110"); }
+
+#g-plugboard .wire.offset--13 ~ .plugboard-hotspot {
+  transform: translate(-288.6px, 0); }
+
+#g-plugboard .wire.offset--12 {
+  d: path("M0,0 C0,40 -266.4,70 -266.4,110"); }
+
+#g-plugboard .wire.offset--12 ~ .plugboard-hotspot {
+  transform: translate(-266.4px, 0); }
+
+#g-plugboard .wire.offset--11 {
+  d: path("M0,0 C0,40 -244.2,70 -244.2,110"); }
+
+#g-plugboard .wire.offset--11 ~ .plugboard-hotspot {
+  transform: translate(-244.2px, 0); }
+
+#g-plugboard .wire.offset--10 {
+  d: path("M0,0 C0,40 -222,70 -222,110"); }
+
+#g-plugboard .wire.offset--10 ~ .plugboard-hotspot {
+  transform: translate(-222px, 0); }
+
+#g-plugboard .wire.offset--9 {
+  d: path("M0,0 C0,40 -199.8,70 -199.8,110"); }
+
+#g-plugboard .wire.offset--9 ~ .plugboard-hotspot {
+  transform: translate(-199.8px, 0); }
+
+#g-plugboard .wire.offset--8 {
+  d: path("M0,0 C0,40 -177.6,70 -177.6,110"); }
+
+#g-plugboard .wire.offset--8 ~ .plugboard-hotspot {
+  transform: translate(-177.6px, 0); }
+
+#g-plugboard .wire.offset--7 {
+  d: path("M0,0 C0,40 -155.4,70 -155.4,110"); }
+
+#g-plugboard .wire.offset--7 ~ .plugboard-hotspot {
+  transform: translate(-155.4px, 0); }
+
+#g-plugboard .wire.offset--6 {
+  d: path("M0,0 C0,40 -133.2,70 -133.2,110"); }
+
+#g-plugboard .wire.offset--6 ~ .plugboard-hotspot {
+  transform: translate(-133.2px, 0); }
+
+#g-plugboard .wire.offset--5 {
+  d: path("M0,0 C0,40 -111,70 -111,110"); }
+
+#g-plugboard .wire.offset--5 ~ .plugboard-hotspot {
+  transform: translate(-111px, 0); }
+
+#g-plugboard .wire.offset--4 {
+  d: path("M0,0 C0,40 -88.8,70 -88.8,110"); }
+
+#g-plugboard .wire.offset--4 ~ .plugboard-hotspot {
+  transform: translate(-88.8px, 0); }
+
+#g-plugboard .wire.offset--3 {
+  d: path("M0,0 C0,40 -66.6,70 -66.6,110"); }
+
+#g-plugboard .wire.offset--3 ~ .plugboard-hotspot {
+  transform: translate(-66.6px, 0); }
+
+#g-plugboard .wire.offset--2 {
+  d: path("M0,0 C0,40 -44.4,70 -44.4,110"); }
+
+#g-plugboard .wire.offset--2 ~ .plugboard-hotspot {
+  transform: translate(-44.4px, 0); }
+
+#g-plugboard .wire.offset--1 {
+  d: path("M0,0 C0,40 -22.2,70 -22.2,110"); }
+
+#g-plugboard .wire.offset--1 ~ .plugboard-hotspot {
+  transform: translate(-22.2px, 0); }
+
+#g-plugboard .wire.offset-0 {
+  d: path("M0,0 C0,40 0,70 0,110"); }
+
+#g-plugboard .wire.offset-0 ~ .plugboard-hotspot {
+  transform: translate(0px, 0); }
+
+#g-plugboard .wire.offset-1 {
+  d: path("M0,0 C0,40 22.2,70 22.2,110"); }
+
+#g-plugboard .wire.offset-1 ~ .plugboard-hotspot {
+  transform: translate(22.2px, 0); }
+
+#g-plugboard .wire.offset-2 {
+  d: path("M0,0 C0,40 44.4,70 44.4,110"); }
+
+#g-plugboard .wire.offset-2 ~ .plugboard-hotspot {
+  transform: translate(44.4px, 0); }
+
+#g-plugboard .wire.offset-3 {
+  d: path("M0,0 C0,40 66.6,70 66.6,110"); }
+
+#g-plugboard .wire.offset-3 ~ .plugboard-hotspot {
+  transform: translate(66.6px, 0); }
+
+#g-plugboard .wire.offset-4 {
+  d: path("M0,0 C0,40 88.8,70 88.8,110"); }
+
+#g-plugboard .wire.offset-4 ~ .plugboard-hotspot {
+  transform: translate(88.8px, 0); }
+
+#g-plugboard .wire.offset-5 {
+  d: path("M0,0 C0,40 111,70 111,110"); }
+
+#g-plugboard .wire.offset-5 ~ .plugboard-hotspot {
+  transform: translate(111px, 0); }
+
+#g-plugboard .wire.offset-6 {
+  d: path("M0,0 C0,40 133.2,70 133.2,110"); }
+
+#g-plugboard .wire.offset-6 ~ .plugboard-hotspot {
+  transform: translate(133.2px, 0); }
+
+#g-plugboard .wire.offset-7 {
+  d: path("M0,0 C0,40 155.4,70 155.4,110"); }
+
+#g-plugboard .wire.offset-7 ~ .plugboard-hotspot {
+  transform: translate(155.4px, 0); }
+
+#g-plugboard .wire.offset-8 {
+  d: path("M0,0 C0,40 177.6,70 177.6,110"); }
+
+#g-plugboard .wire.offset-8 ~ .plugboard-hotspot {
+  transform: translate(177.6px, 0); }
+
+#g-plugboard .wire.offset-9 {
+  d: path("M0,0 C0,40 199.8,70 199.8,110"); }
+
+#g-plugboard .wire.offset-9 ~ .plugboard-hotspot {
+  transform: translate(199.8px, 0); }
+
+#g-plugboard .wire.offset-10 {
+  d: path("M0,0 C0,40 222,70 222,110"); }
+
+#g-plugboard .wire.offset-10 ~ .plugboard-hotspot {
+  transform: translate(222px, 0); }
+
+#g-plugboard .wire.offset-11 {
+  d: path("M0,0 C0,40 244.2,70 244.2,110"); }
+
+#g-plugboard .wire.offset-11 ~ .plugboard-hotspot {
+  transform: translate(244.2px, 0); }
+
+#g-plugboard .wire.offset-12 {
+  d: path("M0,0 C0,40 266.4,70 266.4,110"); }
+
+#g-plugboard .wire.offset-12 ~ .plugboard-hotspot {
+  transform: translate(266.4px, 0); }
+
+#g-plugboard .wire.offset-13 {
+  d: path("M0,0 C0,40 288.6,70 288.6,110"); }
+
+#g-plugboard .wire.offset-13 ~ .plugboard-hotspot {
+  transform: translate(288.6px, 0); }
+
+#g-plugboard .wire.offset-14 {
+  d: path("M0,0 C0,40 310.8,70 310.8,110"); }
+
+#g-plugboard .wire.offset-14 ~ .plugboard-hotspot {
+  transform: translate(310.8px, 0); }
+
+#g-plugboard .wire.offset-15 {
+  d: path("M0,0 C0,40 333,70 333,110"); }
+
+#g-plugboard .wire.offset-15 ~ .plugboard-hotspot {
+  transform: translate(333px, 0); }
+
+#g-plugboard .wire.offset-16 {
+  d: path("M0,0 C0,40 355.2,70 355.2,110"); }
+
+#g-plugboard .wire.offset-16 ~ .plugboard-hotspot {
+  transform: translate(355.2px, 0); }
+
+#g-plugboard .wire.offset-17 {
+  d: path("M0,0 C0,40 377.4,70 377.4,110"); }
+
+#g-plugboard .wire.offset-17 ~ .plugboard-hotspot {
+  transform: translate(377.4px, 0); }
+
+#g-plugboard .wire.offset-18 {
+  d: path("M0,0 C0,40 399.6,70 399.6,110"); }
+
+#g-plugboard .wire.offset-18 ~ .plugboard-hotspot {
+  transform: translate(399.6px, 0); }
+
+#g-plugboard .wire.offset-19 {
+  d: path("M0,0 C0,40 421.8,70 421.8,110"); }
+
+#g-plugboard .wire.offset-19 ~ .plugboard-hotspot {
+  transform: translate(421.8px, 0); }
+
+#g-plugboard .wire.offset-20 {
+  d: path("M0,0 C0,40 444,70 444,110"); }
+
+#g-plugboard .wire.offset-20 ~ .plugboard-hotspot {
+  transform: translate(444px, 0); }
+
+#g-plugboard .wire.offset-21 {
+  d: path("M0,0 C0,40 466.2,70 466.2,110"); }
+
+#g-plugboard .wire.offset-21 ~ .plugboard-hotspot {
+  transform: translate(466.2px, 0); }
+
+#g-plugboard .wire.offset-22 {
+  d: path("M0,0 C0,40 488.4,70 488.4,110"); }
+
+#g-plugboard .wire.offset-22 ~ .plugboard-hotspot {
+  transform: translate(488.4px, 0); }
+
+#g-plugboard .wire.offset-23 {
+  d: path("M0,0 C0,40 510.6,70 510.6,110"); }
+
+#g-plugboard .wire.offset-23 ~ .plugboard-hotspot {
+  transform: translate(510.6px, 0); }
+
+#g-plugboard .wire.offset-24 {
+  d: path("M0,0 C0,40 532.8,70 532.8,110"); }
+
+#g-plugboard .wire.offset-24 ~ .plugboard-hotspot {
+  transform: translate(532.8px, 0); }
+
+#g-plugboard .wire.offset-25 {
+  d: path("M0,0 C0,40 555,70 555,110"); }
+
+#g-plugboard .wire.offset-25 ~ .plugboard-hotspot {
+  transform: translate(555px, 0); }
+
+#g-plugboard .plugboard-hotspot {
+  cursor: pointer;
+  stroke-width: 0; }
+  .animated #g-plugboard .plugboard-hotspot {
+    transition: transform 500ms ease; }
+
+.ring-line {
+  fill: none;
+  stroke: black;
+  stroke-width: 2px; }
+
+.ring-letter {
+  font-size: 11pt; }
+  .animated .ring-letter {
+    transition: fill 500ms ease; }
+  .ring-letter.notch {
+    fill: red; }
+
+#g-reflector .ring-letter {
+  font-size: 8pt; }
+
+.ring-dot {
+  fill: #bf0000;
+  stroke: none; }
+
+.ring-window {
+  fill: none;
+  stroke: black;
+  stroke-width: 5px; }
+
+.rotor-wires-instance {
+  visibility: hidden;
+  opacity: 0; }
+  .animated .rotor-wires-instance {
+    transition: all 500ms ease; }
+  .rotor-wires-instance.selected {
+    visibility: visible;
+    opacity: 1; }
+
+.animated .rotor, .animated .rotor-wires {
+  transition: transform 500ms ease; }
+
+.rotor-hotspot {
+  cursor: pointer;
+  opacity: 0; }
+
+.wire {
+  fill: none;
+  stroke-width: 1px; }
+
+.selected-letter-A .wire-A {
+  stroke-width: 5px; }
+
+.selected-letter-B .wire-B {
+  stroke-width: 5px; }
+
+.selected-letter-C .wire-C {
+  stroke-width: 5px; }
+
+.selected-letter-D .wire-D {
+  stroke-width: 5px; }
+
+.selected-letter-E .wire-E {
+  stroke-width: 5px; }
+
+.selected-letter-F .wire-F {
+  stroke-width: 5px; }
+
+.selected-letter-G .wire-G {
+  stroke-width: 5px; }
+
+.selected-letter-H .wire-H {
+  stroke-width: 5px; }
+
+.selected-letter-I .wire-I {
+  stroke-width: 5px; }
+
+.selected-letter-J .wire-J {
+  stroke-width: 5px; }
+
+.selected-letter-K .wire-K {
+  stroke-width: 5px; }
+
+.selected-letter-L .wire-L {
+  stroke-width: 5px; }
+
+.selected-letter-M .wire-M {
+  stroke-width: 5px; }
+
+.selected-letter-N .wire-N {
+  stroke-width: 5px; }
+
+.selected-letter-O .wire-O {
+  stroke-width: 5px; }
+
+.selected-letter-P .wire-P {
+  stroke-width: 5px; }
+
+.selected-letter-Q .wire-Q {
+  stroke-width: 5px; }
+
+.selected-letter-R .wire-R {
+  stroke-width: 5px; }
+
+.selected-letter-S .wire-S {
+  stroke-width: 5px; }
+
+.selected-letter-T .wire-T {
+  stroke-width: 5px; }
+
+.selected-letter-U .wire-U {
+  stroke-width: 5px; }
+
+.selected-letter-V .wire-V {
+  stroke-width: 5px; }
+
+.selected-letter-W .wire-W {
+  stroke-width: 5px; }
+
+.selected-letter-X .wire-X {
+  stroke-width: 5px; }
+
+.selected-letter-Y .wire-Y {
+  stroke-width: 5px; }
+
+.selected-letter-Z .wire-Z {
+  stroke-width: 5px; }
+
+.color-A {
+  stroke: #bf0000; }
+
+.fill-color-A {
+  fill: #bf0000; }
+
+.color-B {
+  stroke: #bf2c00; }
+
+.fill-color-B {
+  fill: #bf2c00; }
+
+.color-C {
+  stroke: #bf5800; }
+
+.fill-color-C {
+  fill: #bf5800; }
+
+.color-D {
+  stroke: #bf8400; }
+
+.fill-color-D {
+  fill: #bf8400; }
+
+.color-E {
+  stroke: #bfb100; }
+
+.fill-color-E {
+  fill: #bfb100; }
+
+.color-F {
+  stroke: #a2bf00; }
+
+.fill-color-F {
+  fill: #a2bf00; }
+
+.color-G {
+  stroke: #76bf00; }
+
+.fill-color-G {
+  fill: #76bf00; }
+
+.color-H {
+  stroke: #4abf00; }
+
+.fill-color-H {
+  fill: #4abf00; }
+
+.color-I {
+  stroke: #1dbf00; }
+
+.fill-color-I {
+  fill: #1dbf00; }
+
+.color-J {
+  stroke: #00bf0f; }
+
+.fill-color-J {
+  fill: #00bf0f; }
+
+.color-K {
+  stroke: #00bf3b; }
+
+.fill-color-K {
+  fill: #00bf3b; }
+
+.color-L {
+  stroke: #00bf67; }
+
+.fill-color-L {
+  fill: #00bf67; }
+
+.color-M {
+  stroke: #00bf93; }
+
+.fill-color-M {
+  fill: #00bf93; }
+
+.color-N {
+  stroke: #00bfbf; }
+
+.fill-color-N {
+  fill: #00bfbf; }
+
+.color-O {
+  stroke: #0093bf; }
+
+.fill-color-O {
+  fill: #0093bf; }
+
+.color-P {
+  stroke: #0067bf; }
+
+.fill-color-P {
+  fill: #0067bf; }
+
+.color-Q {
+  stroke: #003bbf; }
+
+.fill-color-Q {
+  fill: #003bbf; }
+
+.color-R {
+  stroke: #000fbf; }
+
+.fill-color-R {
+  fill: #000fbf; }
+
+.color-S {
+  stroke: #1d00bf; }
+
+.fill-color-S {
+  fill: #1d00bf; }
+
+.color-T {
+  stroke: #4a00bf; }
+
+.fill-color-T {
+  fill: #4a00bf; }
+
+.color-U {
+  stroke: #7600bf; }
+
+.fill-color-U {
+  fill: #7600bf; }
+
+.color-V {
+  stroke: #a200bf; }
+
+.fill-color-V {
+  fill: #a200bf; }
+
+.color-W {
+  stroke: #bf00b1; }
+
+.fill-color-W {
+  fill: #bf00b1; }
+
+.color-X {
+  stroke: #bf0084; }
+
+.fill-color-X {
+  fill: #bf0084; }
+
+.color-Y {
+  stroke: #bf0058; }
+
+.fill-color-Y {
+  fill: #bf0058; }
+
+.color-Z {
+  stroke: #bf002c; }
+
+.fill-color-Z {
+  fill: #bf002c; }
+
+
+/*# sourceMappingURL=bundle.css.map*/
