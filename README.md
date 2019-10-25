@@ -113,10 +113,13 @@ The form in the upper left allows you to quickly change settings.
 
 *   [Crypto Museum](https://www.cryptomuseum.com/crypto/enigma/index.htm):
     General resource about the machines.
+    explanation of the procedure and attacks.
 *   [Ellsbury](http://www.ellsbury.com/enigmabombe.htm): Explanation of the
     Bombe cryptanalytic attack.
 *   [1940 Enigma General Procedures](http://www.codesandciphers.org.uk/documents/egenproc/page24.htm),
     page 24: Rules by which the Germans used the machines.
+*   [Matematik Sider](https://www.matematiksider.dk/enigma_eng.html): Well
+    written summary of the Enigma.
 
 ## License
 
